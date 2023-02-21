@@ -1,0 +1,188 @@
+.ntav_calendar {
+  border: 1px solid rgb(174, 174, 174);
+  padding: 8px;
+  font-size: 13px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.ntav_calendar .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.ntav_calendar .header .current_month {
+  font-weight: 500;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* ----- nút chuyển tháng -----  */
+.ntav_calendar .indicators {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ntav_calendar .indicators .indicator {
+  font-weight: 500;
+  font-size: 15px;
+  background: transparent !important;
+  border: none;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.ntav_calendar .indicators .indicator:active {
+  transform: scale(0.9);
+}
+
+.ntav_calendar .indicator.disabled {
+  color: rgb(170, 170, 170);
+  border: 0;
+  pointer-events: none;
+}
+
+.ntav_calendar .indicatorMiddle {
+  font-weight: 700;
+  color: grey;
+  margin-bottom: -1px;
+  pointer-events: none;
+}
+
+/* ----- nút chuyển tháng end -----  */
+
+/* ---- thứ trong tuần ----- */
+.ntav_calendar .days {
+  display: flex;
+  background: rgb(24, 24, 24);
+  list-style-type: none;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  padding: 4px 0;
+}
+
+.ntav_calendar .days li {
+  width: calc(100% / 7);
+  line-height: 30px;
+  text-align: center;
+  color: white;
+}
+
+/* ---- thứ trong tuần end ----- */
+.ntav_calendar .dates {
+  list-style-type: none;
+  margin-top: 16px;
+  /* background: gray; */
+  padding: 8px 0;
+}
+
+.ntav_calendar .dates_row {
+  display: flex;
+}
+
+.ntav_calendar .dates li {
+  width: calc(100% / 7);
+  line-height: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1px;
+}
+
+.ntav_calendar .dates li.available span {
+  color: white;
+  cursor: pointer;
+}
+
+.ntav_calendar .dates li.available span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: #ff5e00;
+  /* border-radius: 50%; */
+}
+
+.ntav_calendar .dates li.selected {
+  cursor: pointer;
+}
+
+.ntav_calendar .dates li.isSelected span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: #14c500;
+  color: white;
+  pointer-events: none;
+}
+
+.ntav_calendar .dates li.unavailable,
+.ntav_calendar .dates li.notCurrentMonth {
+  cursor: not-allowed;
+}
+
+.ntav_calendar .dates li.notCurrentMonth {
+  color: #ccc;
+}
+
+.ntav_calendar .availableNote {
+  width: 15px;
+  height: 15px;
+  background: #ff5e00;
+}
+
+.ntav_calendar .unavailableNote {
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+.ntav_calendar li.date {
+  color: #050505;
+}
+
+.ntav_calendar li.notCurrentMonth span {
+  color: rgb(168, 168, 168);
+}
+
+.ntav_calendar li.available {
+  color: white;
+}
+
+.ntav_calendar .notes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  padding-top: 8px;
+}
+
+.ntav_calendar .notes .note {
+  display: flex;
+  gap: 6px;
+}
+
+.ntav_calendar .notes .colorBox {
+  width: 16px;
+  height: 16px;
+}
+
+.ntav_calendar .notes .isSelected.colorBox {
+  background: #14c500;
+}
+
+.ntav_calendar .notes .available.colorBox {
+  background: #ff5e00;
+}
+
+.ntav_calendar .notes .unavailable.colorBox {
+  border: 0.5px solid #ccc;
+  background: white;
+}
