@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Inconsolata";
+  src: local("Inconsolata"),
+    url("./fonts/Inconsolata/Inconsolata-VariableFont_wdth\,wght.ttf");
+  font-weight: light;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #848484;
+}
+
+.app {
+  background: #000;
+  min-height: 100vh;
+}
+
+.ntavTitle {
+  color: rgb(0, 255, 0);
+  font-family: "Inconsolata";
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+  padding: 8px 0 16px;
+}
